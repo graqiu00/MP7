@@ -12,21 +12,24 @@ import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText editText = (EditText) findViewById(R.id.Input);
-    Button button = (Button) findViewById(R.id.Search);
-    TextView textView = (TextView) findViewById(R.id.welcomeword);
-    ConstraintLayout constraintLayout = (ConstraintLayout) findViewById(R.id.background);
+    EditText editText;
+    Button button;
+    TextView textView;
+    ConstraintLayout constraintLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        button = (Button) findViewById(R.id.Search);
+        editText = (EditText) findViewById(R.id.Input);
+        textView = (TextView) findViewById(R.id.definition);
+        constraintLayout = (ConstraintLayout) findViewById(R.id.background);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String input = editText.getText().toString();
-                editText.setText("TYPE");
                 textView.setText(input);
             }
         });
