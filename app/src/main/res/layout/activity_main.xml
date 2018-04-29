@@ -18,6 +18,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Search"
+        android:onClick="onClick"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Input" />
@@ -30,10 +31,10 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="56dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Enter a word"
+        android:hint="Enter a word"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/welcomeword" />
@@ -46,6 +47,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginStart="32dp"
+        android:textColor="#191970"
         android:layout_marginTop="8dp"
         android:text="Welcome to our dictionary"
         android:textAppearance="@style/TextAppearance.AppCompat.Button"
@@ -55,9 +57,9 @@
 
     <TextView
         android:id="@+id/definition"
-        android:layout_width="283dp"
-        android:layout_height="250dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="296dp"
+        android:layout_height="247dp"
+        android:layout_marginBottom="31dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
