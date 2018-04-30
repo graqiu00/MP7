@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         //    @Override
             public void onClick(View view) {
                 String input = editText.getText().toString();
-                Request request = new Request(this,textView);
+                Request request = new Request(this,textView,input);
                 //textView.setText(dictionaryEntries(input));
                 url = dictionaryEntries(input);
                 request.execute(url);

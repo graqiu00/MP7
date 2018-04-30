@@ -18,10 +18,12 @@ public class Request extends AsyncTask<String, Integer, String> {
         public String def;
         Context context;
         TextView textView;
+        String input;
 
-        Request(Context context, TextView textView) {
+        Request(Context context, TextView textView, String word) {
             this.context = context;
             this.textView = textView;
+            this.input = word;
         }
 
         @Override
@@ -73,9 +75,11 @@ public class Request extends AsyncTask<String, Integer, String> {
                 JSONArray definitionArray = definition.getJSONArray("definitions");
 
                 def = definitionArray.getString(0);
-                textView.setText(def);
-
-
+                if (def == null) {
+                    textView.setText("No definition available.");
+                } else {
+                    textView.setText(input.toUpperCase() + ": " + def);
+                }
 
             } catch(JSONException e) {
                 e.printStackTrace();
